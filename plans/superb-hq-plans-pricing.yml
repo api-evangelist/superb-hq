@@ -1,0 +1,131 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Superb
+providerId: superb-hq
+created: '2026-07-05'
+modified: '2026-07-05'
+reconciled: false
+tags:
+- Restaurants
+- Reservations
+- Point of Sale
+- Payments
+- Plans
+description: >-
+  Superb sells its Guest Experience Management platform as per-business SaaS with
+  a transaction-fee model on payments rather than metered API pricing. Two public
+  plans are advertised - Go and Plus - plus a custom Enterprise tier for high-volume
+  businesses. The reservation system, guest CRM and marketing tools that back the
+  modeled Reservations, Bookings, Guests and CRM capabilities are included in the
+  Plus plan. There is no separately priced developer/API product; any programmatic
+  or partner integration is arranged directly with Superb.
+notes: >-
+  Prices captured from the public Superb pricing page. Plus is quoted per business
+  via an on-site calculator rather than a fixed list price; the Go transaction fee
+  is 1.29 percent and Plus is 0.99 percent. Enterprise is offered to businesses
+  processing over EUR 500,000 annually. Verify current rates on the Superb pricing
+  page during reconciliation.
+sources:
+- https://www.superbexperience.com/pricing
+- https://www.superbexperience.com/platform/integrations
+- https://www.superbexperience.com/
+plans:
+- id: superb-go
+  name: Go
+  type: free
+  description: >-
+    Entry plan for shops, coffee shops, bars, kiosks, bakeries, pizzerias and
+    takeaway. No monthly fee, free card terminal, daily payouts and no contract
+    period. Includes the POS app, card terminal and phone support. Does not
+    include the reservation system.
+  entries:
+  - label: Monthly Platform Fee
+    name: monthly_fee
+    type: flat
+    metric: subscription
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: EUR 0 per month
+    userMultiplied: false
+  - label: Card Transaction Fee
+    name: transaction_fee
+    type: usage
+    metric: transaction
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: 1.29 percent per transaction
+    userMultiplied: false
+  elements:
+  - name: POS App
+  - name: Card Terminal (free)
+  - name: Daily Payouts
+  - name: Phone Support
+- id: superb-plus
+  name: Plus
+  type: paid
+  description: >-
+    Full plan for restaurants, fine dining and cafes. Adds the reservation
+    system, mobile POS, online gift cards, online takeaway and email marketing
+    on top of POS and a free card terminal, with a lower transaction fee and no
+    contract period. This is the plan that includes the reservation, guest and
+    marketing features backing the modeled APIs.
+  entries:
+  - label: Monthly Platform Fee
+    name: monthly_fee
+    type: flat
+    metric: subscription
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: custom - quoted per business via the on-site calculator
+    userMultiplied: false
+  - label: Card Transaction Fee
+    name: transaction_fee
+    type: usage
+    metric: transaction
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: 0.99 percent per transaction
+    userMultiplied: false
+  elements:
+  - name: Restaurant POS
+  - name: Mobile POS
+  - name: Card Terminal (free)
+  - name: Reservation System
+  - name: Online Gift Cards
+  - name: Online Takeaway
+  - name: Email Marketing
+  - name: Phone Support
+- id: superb-enterprise
+  name: Enterprise
+  type: enterprise
+  description: >-
+    Custom pricing for businesses processing over EUR 500,000 annually. Superb
+    qualifies and quotes these accounts directly. Any partner or programmatic
+    integration would be negotiated at this level.
+  entries:
+  - label: Enterprise Agreement
+    name: enterprise
+    type: flat
+    metric: contract
+    limit: -1
+    timeFrame: year
+    geo: global
+    unit: 1
+    price: contact sales
+    userMultiplied: false
+  elements:
+  - name: Custom Pricing
+  - name: High-Volume Processing
+  - name: Dedicated Onboarding and Support
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

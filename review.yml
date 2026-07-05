@@ -1,0 +1,95 @@
+aid: superb-hq
+name: Superb
+review:
+  question: Does Superb expose a documented public WebSocket API?
+  answer: false
+  date: '2026-07-05'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was authored. Superb does not publish any documented
+    public API - REST or otherwise - let alone a server-push transport
+    (WebSocket or SSE) to model. Superb is a closed SaaS platform whose guest,
+    reservation and CRM features are consumed through its own web and iOS apps,
+    a hosted booking widget, and a catalog of pre-built connectors. There is no
+    public real-time endpoint on Superb's own surface to describe in AsyncAPI.
+findings:
+  summary: |
+    Superb does not publish a documented public WebSocket API. In fact Superb
+    does not publish a self-serve documented public API of any kind. Superb is a
+    Denmark-based all-in-one Guest Experience Management (GXM) platform for
+    restaurants, cafes and bars, covering reservations, point of sale, payments,
+    gift cards, online takeaway, guest CRM and marketing. The developer-facing
+    footprint is limited to (1) a hosted reservation widget for guests at
+    etch.superbexperience.com, (2) a catalog of pre-built integrations
+    (accounting, payments, staff and stock management, marketing), and (3) a
+    partner portal at partner.superbexperience.com. Any programmatic access to
+    reservations, bookings, guests or CRM is partner-gated and arranged directly
+    with Superb; there is no public REST reference, no endpoint documentation,
+    and therefore no documented WebSocket (ws:// or wss://) surface.
+  accessModel: |
+    Partner-gated / closed SaaS. Superb is sold as per-business SaaS (Go, Plus,
+    Enterprise plans) on a payments transaction-fee model. Integration with
+    third-party systems is delivered through Superb-built connectors listed on
+    the integrations page and through the partner portal - not through a
+    self-serve public API. No docs.superbexperience.com or api.superbexperience.com
+    developer reference was found.
+  endpointsModeled: true
+  endpointsModeledNote: |
+    The APIs described in apis.yml (Reservations, Bookings, Guests, CRM and
+    Marketing) are logical capability groupings modeled from Superb's public
+    product pages and help center. They are NOT backed by published,
+    endpoint-level REST documentation. No specific paths, base URL, or auth
+    scheme were fabricated.
+  transports:
+    - protocol: Hosted Widget
+      scheme: https
+      baseURL: https://etch.superbexperience.com
+      documented: false
+      note: Guest-facing hosted reservation/booking widget. Not a programmable API.
+    - protocol: Pre-built Connectors
+      scheme: https
+      documented: false
+      note: Superb-maintained integrations (accounting, payments, staff, stock, marketing). Configured, not consumed as a public API.
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: No public REST API reference is published on any Superb domain as of the review date.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket endpoint is documented anywhere on Superb's surface.
+sources:
+  - url: https://www.superbexperience.com/
+    type: Website
+    note: All-in-one restaurant/cafe/bar GXM platform. No developer or API section.
+  - url: https://www.superbexperience.com/platform/restaurant-reservation-system
+    type: Documentation
+    note: Reservation product page. Bookings flow into POS with "no integration needed"; no public API.
+  - url: https://www.superbexperience.com/platform/integrations
+    type: Documentation
+    note: Integrations catalog (accounting, payments, staff, stock, marketing). Pre-built connectors, no public API mentioned.
+  - url: https://www.superbexperience.com/pricing
+    type: Documentation
+    note: Go, Plus and Enterprise plans on a transaction-fee model. No API/developer product.
+  - url: https://partner.superbexperience.com/
+    type: Partners
+    note: Partner/reseller portal, not a documented developer API portal.
+  - url: https://helpcenter.superbexperience.com/en/category/reservations-10nttcr/
+    type: Documentation
+    note: Help center reservations articles; end-user guidance, not API reference.
+  - url: https://etch.superbexperience.com/reserve/experience
+    type: SignUp
+    note: Hosted guest booking widget. Not a programmable API.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    No WebSocket surface exists, and Superb publishes no documented public API
+    at all. The Reservations, Bookings, Guests and CRM/Marketing entries in
+    apis.yml are honestly modeled logical capabilities marked endpointsModeled;
+    no endpoints, base URL, or auth scheme were fabricated, and no OpenAPI or
+    AsyncAPI document was authored.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
