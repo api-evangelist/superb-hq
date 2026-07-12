@@ -106,6 +106,8 @@ apis:
     Google Ads, Google Tag Manager); no public REST API is documented, so
     endpoints are modeled.
 common:
+- type: DomainSecurity
+  url: security/superb-hq-domain-security.yml
 - type: Website
   url: https://www.superbexperience.com/
 - type: LinkedIn
