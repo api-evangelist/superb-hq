@@ -32,23 +32,8 @@ Logical capability for creating and managing restaurant reservations — availab
 
 - **Human URL:** [https://helpcenter.superbexperience.com/en/category/reservations-10nttcr/](https://helpcenter.superbexperience.com/en/category/reservations-10nttcr/)
 
-### Superb Bookings API
 
-Logical capability for the booking lifecycle — confirmations, reminders, booking statuses, no-show handling and prepayment/deposit flows. Managed inside the Superb apps and communicated to guests over email and SMS. `endpointsModeled: true`.
 
-- **Human URL:** [https://helpcenter.superbexperience.com/en/article/how-to-use-booking-statuses-ne8q0n/](https://helpcenter.superbexperience.com/en/article/how-to-use-booking-statuses-ne8q0n/)
-
-### Superb Guests API
-
-Logical capability for guest profiles and the guest database — contact details, visit history, notes, tags, spend and preferences powering Superb's Guest Experience Management. `endpointsModeled: true`.
-
-- **Human URL:** [https://www.superbexperience.com/](https://www.superbexperience.com/)
-
-### Superb CRM and Marketing API
-
-Logical capability for guest CRM and email marketing — segments, campaigns and automated messaging built on the guest database, plus pre-built marketing connectors (Meta Pixel, Google Ads, Google Tag Manager). `endpointsModeled: true`.
-
-- **Human URL:** [https://www.superbexperience.com/](https://www.superbexperience.com/)
 
 ## Common Properties
 

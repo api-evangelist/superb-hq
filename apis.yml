@@ -15,113 +15,72 @@ description: >-
   below are logical capability groupings modeled from Superb's public product and
   help-center material - they are marked endpointsModeled because Superb does not
   publish endpoint-level REST documentation.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: paid
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Paid
+  confidence: medium
+  source:
+    - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/superb-hq.png
 tags:
-- Restaurants
-- Reservations
-- Hospitality
-- Guest Experience
-- GXM
-- Point of Sale
-- CRM
-- Payments
+  - Restaurants
+  - Reservations
+  - Hospitality
+  - Guest Experience
+  - GXM
+  - Point of Sale
+  - CRM
+  - Payments
 created: '2026-07-05'
-modified: '2026-07-05'
+modified: '2026-07-25'
 specificationVersion: '0.19'
 apis:
-- aid: superb-hq:superb-hq-reservations-api
-  name: Superb Reservations API
-  tags:
-  - Reservations
-  - Bookings
-  - Availability
-  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-  humanURL: https://helpcenter.superbexperience.com/en/category/reservations-10nttcr/
-  endpointsModeled: true
-  accessModel: Partner-gated - no self-serve public API documented
-  properties:
-  - url: https://www.superbexperience.com/platform/restaurant-reservation-system
-    type: Documentation
-  - url: https://helpcenter.superbexperience.com/en/category/reservations-10nttcr/
-    type: Documentation
-  description: >-
-    Logical capability for creating and managing restaurant reservations -
-    availability, floor and table assignment, booking creation and status changes.
-    Superb surfaces this to guests through a hosted booking widget
-    (etch.superbexperience.com) rather than a documented public REST API;
-    endpoints are modeled, not published.
-- aid: superb-hq:superb-hq-bookings-api
-  name: Superb Bookings API
-  tags:
-  - Bookings
-  - Booking Statuses
-  - No-Shows
-  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-  humanURL: https://helpcenter.superbexperience.com/en/article/how-to-use-booking-statuses-ne8q0n/
-  endpointsModeled: true
-  accessModel: Partner-gated - no self-serve public API documented
-  properties:
-  - url: https://helpcenter.superbexperience.com/en/article/how-to-use-booking-statuses-ne8q0n/
-    type: Documentation
-  description: >-
-    Logical capability for the booking lifecycle - confirmations, reminders,
-    booking statuses, no-show handling and prepayment or deposit flows. Managed
-    inside the Superb apps and communicated to guests over email and SMS; no
-    endpoint-level public API is documented, so endpoints are modeled.
-- aid: superb-hq:superb-hq-guests-api
-  name: Superb Guests API
-  tags:
-  - Guests
-  - Profiles
-  - CRM
-  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-  humanURL: https://www.superbexperience.com/
-  endpointsModeled: true
-  accessModel: Partner-gated - no self-serve public API documented
-  properties:
-  - url: https://www.superbexperience.com/
-    type: Documentation
-  description: >-
-    Logical capability for guest profiles and the guest database - contact
-    details, visit history, notes, tags, spend and preferences that power
-    Superb's Guest Experience Management. Exposed through the Superb product
-    surface, not a documented public API; endpoints are modeled.
-- aid: superb-hq:superb-hq-crm-marketing-api
-  name: Superb CRM and Marketing API
-  tags:
-  - CRM
-  - Marketing
-  - Email
-  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-  humanURL: https://www.superbexperience.com/
-  endpointsModeled: true
-  accessModel: Partner-gated - no self-serve public API documented
-  properties:
-  - url: https://www.superbexperience.com/
-    type: Documentation
-  description: >-
-    Logical capability for guest CRM and email marketing - segments, campaigns
-    and automated messaging built on the guest database. Delivered as an
-    in-product feature and via pre-built marketing connectors (Meta Pixel,
-    Google Ads, Google Tag Manager); no public REST API is documented, so
-    endpoints are modeled.
+  - aid: superb-hq:superb-hq-reservations-api
+    name: Superb Reservations API
+    tags:
+      - Reservations
+      - Bookings
+      - Availability
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+    humanURL: https://helpcenter.superbexperience.com/en/category/reservations-10nttcr/
+    endpointsModeled: true
+    accessModel: Partner-gated - no self-serve public API documented
+    properties:
+      - url: https://www.superbexperience.com/platform/restaurant-reservation-system
+        type: Documentation
+      - url: https://helpcenter.superbexperience.com/en/category/reservations-10nttcr/
+        type: Documentation
+    description: >-
+      Logical capability for creating and managing restaurant reservations -
+      availability, floor and table assignment, booking creation and status changes.
+      Superb surfaces this to guests through a hosted booking widget
+      (etch.superbexperience.com) rather than a documented public REST API;
+      endpoints are modeled, not published.
 common:
-- type: DomainSecurity
-  url: security/superb-hq-domain-security.yml
-- type: Website
-  url: https://www.superbexperience.com/
-- type: LinkedIn
-  url: https://www.linkedin.com/company/superbexperience
-- type: Documentation
-  url: https://helpcenter.superbexperience.com/en/
-- type: Partners
-  url: https://partner.superbexperience.com/
-- type: Integrations
-  url: https://www.superbexperience.com/platform/integrations
-- type: SignUp
-  url: https://etch.superbexperience.com/reserve/experience
-- type: Plans
-  url: plans/superb-hq-plans-pricing.yml
+  - type: DomainSecurity
+    url: security/superb-hq-domain-security.yml
+  - type: Website
+    url: https://www.superbexperience.com/
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/superbexperience
+  - type: Documentation
+    url: https://helpcenter.superbexperience.com/en/
+  - type: Partners
+    url: https://partner.superbexperience.com/
+  - type: Integrations
+    url: https://www.superbexperience.com/platform/integrations
+  - type: SignUp
+    url: https://etch.superbexperience.com/reserve/experience
+  - type: Plans
+    url: plans/superb-hq-plans-pricing.yml
+  - type: ProductPage
+    url: https://helpcenter.superbexperience.com/en/article/how-to-use-booking-statuses-ne8q0n/
 maintainers:
-- FN: Kin Lane
-  email: kin@apievangelist.com
+  - FN: Kin Lane
+    email: kin@apievangelist.com
