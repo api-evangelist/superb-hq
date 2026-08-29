@@ -15,6 +15,17 @@ description: >-
   below are logical capability groupings modeled from Superb's public product and
   help-center material - they are marked endpointsModeled because Superb does not
   publish endpoint-level REST documentation.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: paid
   onboarding: unknown
