@@ -1,0 +1,20 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/superb-hq/integrations
+- https://zapier.com/apps/superb/integrations
+- https://n8n.io/integrations/superb-hq/
+- https://n8n.io/integrations/superb/
+- https://composio.dev/toolkits/superb-hq
+- https://monid.ai/tools/superb-hq
+checked:
+- https://composio.dev/toolkits/superb-hq
+- https://monid.ai/tools/superb-hq
+- https://n8n.io/integrations/superb-hq/
+- https://n8n.io/integrations/superb/
+- https://zapier.com/apps/superb-hq/integrations
+- https://zapier.com/apps/superb/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
